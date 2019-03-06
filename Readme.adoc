@@ -1,0 +1,61 @@
+= *Başlık1*  
+
+=== __Başlık2__
+
+
+.Linux Örnekleri1
+* "cat dosya.txt"
+* "head dosya.txt"
+
+.Ordered
+. tail dosya.txt
+. tail -n 25 dosya.txt
+. grep metin dosya1.txt dosya2.txt
+
+IMPORTANT: UNUTMA 
+
+WARNING: UNUTMA2
+
+CAUTION: UNUTMA3
+
+TIP: ONEMLI
+
+http://edestek.kocaeli.edu.tr/mod/assign/view.php?id=14127
+
+link: https://github.com/asciidoctor
+
+image::colors.jpg[]
+
+image::http://asciidoctor.org/images/octocat.jpg[GitHub mascot]
+
+video::video.mp4[]
+
+video::_HjToekoEMk[youtube]
+
+video::67480300[vimeo]
+
+```c++
+int main()
+{
+  std::cout << "Hello World!";
+}
+```
+
+
+.Table Title
+|===
+|Tablo ismi 1 |Tablo ismi 2 |Rıza 3 
+
+|Bilgi 1
+|Bilgi 2
+|Boçoğlu
+
+|Bilgi2
+|Bilgi2
+|150201182
+
+|Bilgi3
+|Bilgi3
+|Linux ve Ağ Yönetimi
+|===
+
