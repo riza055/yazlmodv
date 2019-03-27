@@ -1,0 +1,13 @@
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+
+
+Actor Yönetici
+rectangle Yöneticinin_Yapacakları{
+  Yönetici -- (Vizyona Film Ekleme/Çıkarma)
+  Yönetici -- (Seans Ekleme/Çıkarma)
+  Yönetici -- (Bilet Fiyatı Değiştirebilme)
+}
+
+@enduml

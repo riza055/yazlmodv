@@ -1,0 +1,49 @@
+@startuml
+class bilet{
+  +seansSaati:Time
+  +seansTarihi:Date
+  -yeniSeans():void 
+  -seansCikar():void 
+}
+class sinemaSalonu {
+  +salonNumarasi:int
+  
+}
+
+class koltuk {
+  +Koltuklar:Boolean[]
+  +koltukNumarasi:int
+  -Koltuk_doldur():void 
+  -Koltuk_cikar():void 
+  
+}
+
+class film {
+  +filmIsmi:string
+  +filmKonusu:string
+  +oyuncular:string
+  +puan:string
+  -filmEkle():void 
+  -filmCikar():void 
+  
+}
+sinemaSalonu -down-* bilet
+film -down-* bilet
+koltuk -down-o sinemaSalonu
+
+class musteri {
+  +isim:string
+  +odulleri:string
+  +bakiye:Money
+  +biletler:
+  -odulKazan():string 
+  -biletAl():bilet
+ }
+ class ogrenci{
+ }
+ class yetiskin{
+ }
+ ogrenci -down-* musteri
+ yetiskin -down-* musteri
+
+@enduml

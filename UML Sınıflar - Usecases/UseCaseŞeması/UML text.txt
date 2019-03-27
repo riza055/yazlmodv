@@ -1,0 +1,40 @@
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+
+actor Müşteri
+actor Sinema
+actor Öğrenci 
+actor Yetişkin
+Öğrenci --|> Müşteri
+Yetişkin --|> Müşteri
+rectangle Sinema_Uygulaması{
+
+  Müşteri -- (Giriş)
+  (Giriş) .> (Giriş Kontrolü) : include
+  (Şifre Yenileme) .up.> (Giriş) : extends
+  (Bağlanma Hatası) .right.> (Giriş) : extends
+  Müşteri -- (Vizyon filmlerini Görebilme)
+  Müşteri -- (Koltuk Seçimi)
+  Müşteri -- (Ödeme yapma)
+
+  (Bilet fiyatında indirim alma) .right.> (Ödeme yapma) : extends
+    note on link
+   Eğer müşteri öğrenci ise indirim yapılır
+    end note
+    
+  (Koltuk seçiminde hata) .right.> (Koltuk Seçimi) :extends
+  
+  (Vizyon filmlerini Görebilme) --- Sinema
+  (Koltuk Seçimi) --- Sinema
+  (Ödeme yapma) --- Sinema
+}
+
+Actor Yönetici
+rectangle Yöneticinin_Yapacakları{
+  Yönetici -- (Vizyona Film Ekleme/Çıkarma)
+  Yönetici -- (Seans Ekleme/Çıkarma)
+  Yönetici -- (Bilet Fiyatı Değiştirebilme)
+}
+
+@enduml
